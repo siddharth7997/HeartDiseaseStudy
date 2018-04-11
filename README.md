@@ -1,4 +1,4 @@
-# HeartDisease Risk Prediction
+# Heart Disease Risk Prediction
 
 ![Alt text](heart.gif)
 
