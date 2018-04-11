@@ -6,10 +6,10 @@ Here we tested various machine learning algorithms on UCI heart disease dataset 
 
 This dataset contains 4 databases concerning heart disease diagnosis. All attributes are numeric-valued. The data was collected from the four following locations:
 
- 1. Cleveland Clinic Foundation
- 2. Hungarian Institute of Cardiology, Budapest
- 3. V.A. Medical Center, Long Beach, CA
- 4. University Hospital, Zurich, Switzerland
+1. Cleveland Clinic Foundation
+2. Hungarian Institute of Cardiology, Budapest
+3. V.A. Medical Center, Long Beach, CA
+4. University Hospital, Zurich, Switzerland
  
  
 ## Attribute Information:
@@ -17,10 +17,10 @@ This dataset contains 4 databases concerning heart disease diagnosis. All attrib
   1. age:age in years       
   2. sex:(1 = male; 0 = female)       
   3. cp:chest pain type
-      - Value 1: typical angina
-      - Value 2: atypical angina
-      - Value 3: non-anginal pain
-      - Value 4: asymptomatic
+    - Value 1: typical angina
+    - Value 2: atypical angina
+    - Value 3: non-anginal pain
+    - Value 4: asymptomatic
   4. trestbps: resting blood pressure  
   5. chol:cholestoral      
   6. fbs:(fasting blood sugar > 120 mg/dl)  (1 = true; 0 = false)    
@@ -36,6 +36,10 @@ This dataset contains 4 databases concerning heart disease diagnosis. All attrib
     - Value 2: flat
     - Value 3: downsloping     
   12. ca: number of major vessels (0-3) colored by flourosopy        
-  13. thal: 3 = normal; 6 = fixed defect; 7 = reversable defect 
+  13. thal: 
+    - 3 = normal
+    - 6 = fixed defect
+    - 7 = reversable defect 
   14. category:diagnosis of heart disease[0-4]       (the predicted attribute)
 
+**Here 1-4 represents diagnosis to be True, and 0 represents absence of heart disease**
