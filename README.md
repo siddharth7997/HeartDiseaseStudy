@@ -2,7 +2,7 @@
 
 ![Alt text](heart.gif)
 
-Here we tested various machine learning algorithms on UCI heart disease dataset to predict the risk one person has towards the heart disease.
+Here we tested various machine learning algorithms on UCI heart disease dataset to predict the risk one person has towards the heart disease.Our goal is to predict the probablity if a person will be daignosed with a heart disease with maximum accuracy and find out which attributes most towards the heart disease.
 
 This dataset contains 4 databases concerning heart disease diagnosis. All attributes are numeric-valued. The data was collected from the four following locations:
 
