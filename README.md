@@ -1,6 +1,7 @@
 # HeartDisease Risk Prediction
 
-<img scr="https://thumbs.gfycat.com/SlowShadyAntlion-size_restricted.gifs"/>
+![Alt text](heart.gif)
+
 Here we tested various machine learning algorithms on UCI heart disease dataset to predict the risk one person has towards the heart disease.
 
 This dataset contains 4 databases concerning heart disease diagnosis. All attributes are numeric-valued. The data was collected from the four following locations:
