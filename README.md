@@ -43,3 +43,11 @@ This dataset contains 4 databases concerning heart disease diagnosis. All attrib
   14. category:diagnosis of heart disease[0-4]       (the predicted attribute)
 
 **Here 1-4 represents diagnosis to be True, and 0 represents absence of heart disease**
+
+## Attribute Importance based on ExtraTreeClassifier
+![Alt text](attribute_importance.png "Attribute Importance")
+
+## Final Testing and Training
+![Alt text]( 	training_nn.png "Training Neural N/Ws for around 600 iterations")
+
+**USING NEURAL N/W WITH 2 LAYERS WE GOT AN ACCURACY:96% and PRECISION:93%**
