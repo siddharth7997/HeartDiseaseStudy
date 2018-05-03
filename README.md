@@ -56,5 +56,5 @@ This dataset contains 4 databases concerning heart disease diagnosis. All attrib
 
 ![Alt text]( 	homepage.png "Homepage")
 ![Alt text]( 	positive_result.png "Postive test result")
-![Alt text]( 	moderate_result.png "Moderate test result")
+![Alt text]( 	moderate.png "Moderate test result")
 ![Alt text]( 	highly_negative.png "Highly negative test result")
