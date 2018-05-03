@@ -47,12 +47,19 @@ This dataset contains 4 databases concerning heart disease diagnosis. All attrib
 ## Attribute Importance based on ExtraTreeClassifier
 ![Alt text](attribute_importance.png "Attribute Importance")
 
+## Dependencies
+1. Flask Server
+2. Keras
+3. Pandas
+4. Numpy
+5. Sklearn
+
 ## Testing and Training
 ![Alt text]( 	training_nn.png "Training Neural N/Ws for around 600 iterations")
 
 **USING NEURAL N/W WITH 2 LAYERS WE GOT AN ACCURACY:96% and PRECISION:93%**
 
-## FRONT END AND RESULTS
+## Front-end and Results
 
 ![Alt text]( 	homepage.png "Homepage")
 ![Alt text]( 	positive_result.png "Postive test result")
