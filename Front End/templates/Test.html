@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Heart Disease Prediction</title>
+
+<script type="text/javascript" src="view.js"></script>
+    <link rel="stylesheet"  href="{{ url_for('static', filename='style.css') }}" type ="text/css">
+<style>
+    .white{
+      color:white;
+    }
+    .b1:hover{
+        background: #2dc899;
+        box-shadow: 0 12px 16px 0 rgba(255,255,255,0.24), 0 17px 50px 0 rgba(255,255,255,0.19);
+    }
+    input, select {
+    
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    }
+    
+    input:focus {
+    background-color: lightblue;
+    }
+    B{
+      color:white;
+    }
+</style>
+</head>
+<script language="Javascript">
+function validate(){
+var allok = true;
+  if(Heart_Disease_Prediction.Age__1.value == ""){
+    alert('Invalid input for Age, this must be a number')
+    return false;
+  }
+  if(Heart_Disease_Prediction.Blood_Pressure_In_mmHg__4.value == ""){
+    alert('Invalid input for Blood Pressure In mmHg, this must be a number')
+    return false;
+  }
+  if(Heart_Disease_Prediction.Cholesterol_In_mgdl__5.value == ""){
+    alert('Invalid input for Cholesterol In mg/dl, this must be a number')
+    return false;
+  }
+  if(isNaN(Heart_Disease_Prediction.Maximum_Heart_Rate__8.value)){
+    alert('Invalid input for Maximum Heart Rate, this must be a number')
+    return false;
+  }
+  if(Heart_Disease_Prediction.Exercise_Induced_Angina__9.selectedIndex == 0 ){
+    alert('Invalid input for Exercise Induced Angina');
+    return false;
+  }
+  if(Heart_Disease_Prediction.Old_Peak__10.value == ""){
+    alert('Invalid input for Old Peak');
+    return false;
+  }
+document.Heart_Disease_Prediction.Submit.disabled="disabled";
+return true;
+}
+</script>
+
+<body  id="main_body" style="background-image: url({{ url_for('static', filename='Image.gif') }}) ; height:100%; background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;" >
+	
+	<img id="top" src="top.png" alt="">
+	<div id="form_container">
+	
+        <h1><center><a>Intelligent Heart Disease Prediction System</a></center></h1>
+		
+
+
+<form style="max-width:700px; margin:auto;" name="Heart_Disease_Prediction" method="Post" >
+<table width="100%" border="0" cellpadding="5" cellspacing="0">
+<tr><td class="white">Age</td><td><input type="text" class="element text small" id='Age__1' name="Age__1"  ><B> [Range: 25-110]</B></td></tr>
+<tr><td class="white">Gender</td><td><select  class="element select medium" name="Gender__2"><option value="Male">Male</option>
+<option value="Female" >Female</option>
+</select></td></tr>
+<tr><td class="white">Chest Pain Type</td><td><select class="element select medium" name="Chest_Pain_Type__3"><option value="Typical Angina" selected>Typical Angina</option>
+<option value="Atypical Angina">Atypical Angina</option>
+<option value="Non-Angina Pain">Non-Angina Pain</option>
+<option value="Asymptomatic">Asymptomatic</option>
+</select></td></tr>
+<tr><td class="white">Blood Pressure (In mmHg)</td><td><input type="edit"  class="element text small" id="Blood_Pressure_In_mmHg__4" name="Blood_Pressure_In_mmHg__4" value="" size="10"> <B>[Range: 60-200]</B></td></tr>
+<tr><td class="white">Cholesterol (In mg/dl)</td><td><input type="edit"  class="element text small" id="Cholesterol_In_mgdl__5" name="Cholesterol_In_mgdl__5" value="" size="10"> <B>[Range: 120-600]</B></td></tr>
+<tr><td class="white">Fasting Blood Sugar</td><td><select class="element select medium" name="Fasting_Blood_Sugar__6"><option value=">120 mg/dl" selected>>120 mg/dl</option>
+<option value="=<120 mg/dl">=&#60;120 mg/dl</option>
+</select></td></tr>
+<tr><td class="white">Resting ECG</td><td><select class="element select medium" name="Resting_ECG__7"><option value="Normal" selected>Normal</option>
+<option value="Abnormal">ST-T Wave abnormality</option>
+<option value="Hypertrophy">Hypertrophy</option>
+</select></td></tr>
+<tr><td class="white">Maximum Heart Rate</td><td><input type="edit" class="element text small" name="Maximum_Heart_Rate__8" value="" size="10"> <B>[Range: 60-200]</B></td></tr>
+<tr><td class="white">Exercise Induced Angina</td><td><select class="element select medium" name="Exercise_Induced_Angina__9"><option value="NA" selected>Please select</option>
+<option value="Yes">Yes</option>
+<option value="No">No</option>
+</select></td></tr>
+<tr><td class="white">Old Peak</td><td><input type="edit" name="Old_Peak__10" id="Old_Peak__10" class="element text small" value="" size="10"> <B>[Range: 0-6]</B></td></tr>
+<tr><td class="white">Slope</td><td><select class="element select medium"  name="Slope__11"><option value="Upsloping" selected>Upsloping</option>
+<option value="Flat">Flat</option>
+<option value="Downsloping">Downsloping</option>
+</select></td></tr>
+<tr><td class="white">Number of Vessels Colored</td><td><select class="element select medium" name="Number_of_Vessels_Colored__12"><option value="0" selected>0</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+</select></td></tr>
+<tr><td class="white">Thal</td><td><select class="element select medium" name="Thal__13"><option value="Normal">Normal</option>
+<option value="Fixed Defect">Fixed Defect</option>
+<option value="Reversible Defect">Reversible Defect</option>
+</select></td></tr>
+<tr><td align="center">
+	<input type="reset" class="button b1" style="background: #50d8af;
+  border: 0;
+  border-radius: 3px;
+  padding: 10px 30px;
+  color: #fff;
+  transition: 0.4s;
+  cursor: pointer;" name="Reset" value="Reset"></td>
+	<td align="center">
+	<input type="submit" class="button b1" style="background: #50d8af;
+  border: 0;
+  border-radius: 3px;
+  padding: 10px 30px;
+  color: #fff;
+  transition: 0.4s;
+  cursor: pointer;" name="Submit"  onclick="isNumeric()"  value="Submit"></td></tr></table></form>
+
+</div>
+<img id="bottom" src="bottom.png" alt="">
+</body>
